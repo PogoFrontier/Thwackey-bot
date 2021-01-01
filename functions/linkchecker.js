@@ -4,7 +4,7 @@ module.exports = {
         const { bot, channels, roles } = require("../data.json");
 
         //admins/moderators/minimods bypass link detection
-        if (message.member.roles.cache.has(roles.developer_ID)) {
+        if (message.member.roles.cache.has(roles.leadDev_ID)) {
             return;
         }
 
