@@ -10,7 +10,7 @@ module.exports = {
 
         //adds a filter for the collector
         const filter = (reaction) => {
-            return reaction.emoji.name == '🧑‍🎨' || reaction.emoji.name == '🧑‍💻' || reaction.emoji.name == '🎮';
+            return reaction.emoji.name == '🧑‍🎨' || reaction.emoji.name == '🧑‍💻' || reaction.emoji.name == '🎮' || reaction.emoji.name == "⚔️";
         };
 
         //creates collector
@@ -21,6 +21,8 @@ module.exports = {
             if (reaction.emoji.name == '🧑‍🎨') guild.members.cache.get(user.id).roles.add(roles.designer_ID);
             if (reaction.emoji.name == '🧑‍💻') guild.members.cache.get(user.id).roles.add(roles.developer_ID);
             if (reaction.emoji.name == '🎮') guild.members.cache.get(user.id).roles.add(roles.tester_ID);
+            if (reaction.emoji.name == '⚔️') guild.members.cache.get(user.id).roles.add(roles.battler_ID);
+
         });
 
         //removes roles if collected emoji id matches
@@ -28,6 +30,8 @@ module.exports = {
             if (reaction.emoji.name == '🧑‍🎨') guild.members.cache.get(user.id).roles.remove(roles.designer_ID);
             if (reaction.emoji.name == '🧑‍💻') guild.members.cache.get(user.id).roles.remove(roles.developer_ID);
             if (reaction.emoji.name == '🎮') guild.members.cache.get(user.id).roles.remove(roles.tester_ID);
+            if (reaction.emoji.name == '⚔️') guild.members.cache.get(user.id).roles.remove(roles.battler_ID);
+
         });
     },
 };
