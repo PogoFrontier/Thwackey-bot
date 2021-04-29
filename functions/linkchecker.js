@@ -13,6 +13,12 @@ module.exports = {
 
         //check message
         if (discordInvitePattern.test(message.content)) {
+            if (message.mentions.members.first() != undefined) {
+                if (message.mentions.members.first().roles.cache.has(roles.leadDev_ID)) {
+                    //if an allowed role admin/moderator/minimod got mentioned in the message   
+                    return sendApproval();
+                }
+            }
             sendWarning();
         }
 
