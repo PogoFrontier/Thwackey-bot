@@ -5,7 +5,7 @@ const reactionRoles = require('./functions/reactionroles.js');
 const linkchecker = require('./functions/linkchecker.js')
 const express = require("express");
 var app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3001;
 
 
 const client = new Discord.Client();
@@ -30,8 +30,11 @@ client.on('ready', async() => {
 
 client.on('message', message => {
     if (message.author.bot) return;
+
     //activates link checker
+    if(message.guild.id ==="793936386201354310"){
     linkchecker.execute(message);
+    }
 
     if (!message.content.startsWith(bot.prefix)) { return; }
 
