@@ -5,6 +5,8 @@ const reactionRoles = require('./functions/reactionroles.js');
 const linkchecker = require('./functions/linkchecker.js');
 const vote = require('./functions/vote.js');
 const express = require('express');
+const dotenv = require('dotenv');
+dotenv.config();
 var app = express();
 const PORT = process.env.PORT || 3001;
 
@@ -124,4 +126,4 @@ client.on('guildMemberRemove', member => {
 });
 
 //logs in
-client.login(bot.token);
+client.login(process.env.TOKEN);

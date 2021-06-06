@@ -1,0 +1,28 @@
+{
+    "bot": {
+        "prefix": "-",
+        "color": "#0f9946"
+    },
+    "channels": {
+        "welcome_ID": "794554008479334430",
+        "log_ID": "794553079483072513",
+        "roles_ID": "794554086074351616"
+    },
+    "messages": {
+        "reactionRoles_ID": "794582578468225055"
+    },
+    "roles": {
+        "muted_ID": "794520384015695912",
+        "developer_ID": "794582865034608660",
+        "leadDev_ID": "793948977774854144",
+        "designer_ID": "794269668512497694",
+        "tester_ID": "794585431994793994",
+        "battler_ID": "799712308623310879",
+        "available_ID": "837950520462278690",
+        "translator_ID": "850406925928497212"
+    },
+    "links": {
+        "BackEnd": "https://github.com/DeveloperKhan/pogo-web-backend",
+        "FrontEnd": "https://github.com/DeveloperKhan/pogo-web"
+    }
+}
