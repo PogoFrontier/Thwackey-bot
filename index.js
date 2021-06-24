@@ -98,7 +98,7 @@ client.on('guildMemberAdd', member => {
 		.setTitle('Welcome to the Project Grookey Team!')
 		.setAuthor(member.user.tag)
 		.setThumbnail(member.user.displayAvatarURL())
-		.setDescription(`This is the official Discord server for Project Grookey. As we are still in development, this server is targeted towards project contributors and collaborators. If that is you, please visit <#${channels.roles_ID}> and select how you would like to contribute. If none of the roles fit or if you have any questions, feel free to reach out to <@330092465212227584>. \n\n __**Links**__\n [Front-end](${links.FrontEnd})\n[Back-end](${links.BackEnd})`)
+		.setDescription(`This is the official Discord server for Project Grookey. Please visit <#${channels.roles_ID}> and select how you would like to contribute. Also visit <#${channels.testinfo_ID}> to learn how to use the project. If none of the roles fit or if you have any questions, feel free to reach out to <@330092465212227584>. \n\n __**Links**__\n [Front-end](${links.FrontEnd})\n[Back-end](${links.BackEnd})`)
 		.setFooter(`We have ${member.guild.members.cache.filter(m => !m.user.bot).size} human members now`)
 		.setTimestamp();
 	const welcomeChannel = member.guild.channels.cache.get(channels.welcome_ID);
